@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Shop
+
+# Model Form Field configuration
+form: $/bookrr/store/models/shop/fields.yaml
+
+# Model Class name
+modelClass: Bookrr\Store\Models\Shop
+
+# Default redirect location
+defaultRedirect: bookrr/store/shop
+
+# Create page
+create:
+    title: Create Shop
+    redirect: bookrr/store/shop/update/:id
+    redirectClose: bookrr/store/shop
+
+# Update page
+update:
+    title: Edit Shop
+    redirect: bookrr/store/shop
+    redirectClose: bookrr/store/shop
+
+# Preview page
+preview:
+    title: Preview Shop
