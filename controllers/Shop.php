@@ -2,6 +2,7 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Bookrr\Product\Models\Products;
 
 /**
  * Shop Back-end Controller
@@ -28,6 +29,9 @@ class Shop extends Controller
     public function index()
     {
         $this->pageTitle = "Shop";
+        $this->addCss($this->assetPath . 'css/bootstrap.css');
         $this->addCss($this->assetPath . 'fontawesome/css/all.css');
+
+        $this->vars['products'] = Products::all();
     }
 }
