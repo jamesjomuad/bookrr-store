@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: ID
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        format: %.20s
+        width: 180px
+        searchable: true
+        sortable: true
+    price:
+        label: Price
+        type: text
+        format: $%.2f
+        width: 80px
+        searchable: false
+        sortable: false
+    stock:
+        label: Stocks

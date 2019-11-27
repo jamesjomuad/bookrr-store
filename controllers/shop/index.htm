@@ -1,12 +1,15 @@
-<div class="control-toolbar mt-4">
+<!-- <div class="control-toolbar mt-4">
     <div class="toolbar-item toolbar-primary">
         <div data-control="toolbar">
             <button type="button" class="btn btn-primary">Clear</button>
             <button type="button" class="btn btn-default oc-icon-magic">Publish</button>
         </div>
     </div>
+</div> -->
+
+<div class="col-md-8 list-with-sidebar p-3">
+    <?= $this->listRender() ?>
 </div>
-
-<?= $this->makePartial('items') ?>
-
-<?= $this->makePartial('aside') ?>
+<aside class="col-md-4">
+    <?= $this->makePartial('aside') ?>
+</aside>

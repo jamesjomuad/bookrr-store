@@ -33,6 +33,8 @@ class Shop extends Controller
         $this->addCss($this->assetPath . 'fontawesome/css/all.css');
         $this->addCss($this->assetPath . 'css/shop.css','v1.3');
 
-        $this->vars['products'] = Products::get();
+        // $this->vars['products'] = Products::get();
+
+        $this->asExtension('ListController')->index();
     }
 }
