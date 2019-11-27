@@ -1,0 +1,38 @@
+.card{
+    width: 23.33%;
+    float: left;
+    margin: 2px;
+    box-shadow: 0 1px 5px #ddd;
+}
+.card img{
+    height: 130px;
+    object-fit: cover;
+}
+.card-body .wrap{
+    overflow: auto;
+    display: block;
+    height: 90px;
+    font-size: 12px;
+}
+.card-title{
+    font-size: 20px;
+}
+h4.card-title{
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-body .wrap::-webkit-scrollbar {
+width: 0.8em;
+}
+
+.card-body .wrap::-webkit-scrollbar-track {
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-body .wrap::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: 1px solid slategrey;
+}

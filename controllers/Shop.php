@@ -29,9 +29,10 @@ class Shop extends Controller
     public function index()
     {
         $this->pageTitle = "Shop";
-        $this->addCss($this->assetPath . 'css/bootstrap.css');
+        $this->addCss($this->assetPath . 'css/bootstrap.css','v1.0');
         $this->addCss($this->assetPath . 'fontawesome/css/all.css');
+        $this->addCss($this->assetPath . 'css/shop.css','v1.0');
 
-        $this->vars['products'] = Products::all();
+        $this->vars['products'] = Products::get();
     }
 }
