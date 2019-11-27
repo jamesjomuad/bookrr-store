@@ -1,0 +1,20 @@
+<div class="cards scrolify">
+    <?php $products->each(function($item){ ?>
+        <div class="card" data-id="<?= $item->id ?>">
+            <img src="<?= $item->mediumThumb ?>" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"><?= $item->price ?></h5>
+                <h4 class="card-title"><?= $item->name ?></h4>
+            </div>
+        </div>
+    <?php }); ?>
+    <?php $products->each(function($item){ ?>
+        <div class="card" data-id="<?= $item->id ?>">
+            <img src="<?= $item->mediumThumb ?>" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"><?= $item->price ?></h5>
+                <h4 class="card-title"><?= $item->name ?></h4>
+            </div>
+        </div>
+    <?php }); ?>
+</div>
