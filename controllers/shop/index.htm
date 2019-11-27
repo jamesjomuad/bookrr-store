@@ -1,143 +1,135 @@
-
-<div class="control-toolbar">
+<div class="control-toolbar mt-4">
     <div class="toolbar-item toolbar-primary">
         <div data-control="toolbar">
-            <!-- <button type="button" class="btn btn-primary btn-circle btn-sm">Clear</button> 
-            <button type="button" class="btn btn-secondary btn-circle btn-sm">New</button> 
-            <button type="button" class="btn btn-success btn-circle btn-sm">Green</button> -->
-            
             <button type="button" class="btn btn-primary">Clear</button>
-            <button type="button" class="btn btn-default oc-icon-trash">Delete</button>
             <button type="button" class="btn btn-default oc-icon-magic">Publish</button>
-            <button type="button" class="btn btn-default oc-icon-power-off">Unpublish</button>
-            <button type="button" class="btn btn-default oc-icon-clock-o">Timer</button>
-            <button type="button" class="btn btn-default oc-icon-mail-reply-all">Send by email</button>
-            <button type="button" class="btn btn-default oc-icon-hdd-o">Archive</button>
         </div>
     </div>
 </div>
 
-<hr class="m-b-md">
-
-<section class="col-md-8 p-0">
+<div class="cards scrolify">
     <?php $products->each(function($item){ ?>
         <div class="card">
             <img src="<?= $item->mediumThumb ?>" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title"><?= $item->price ?></h5>
                 <h4 class="card-title"><?= $item->name ?></h4>
-                <div class="wrap">
-                    <p class="card-text"><?= $item->name ?></p>
-                </div>
             </div>
         </div>
     <?php }); ?>
-</section>
+    <?php $products->each(function($item){ ?>
+        <div class="card">
+            <img src="<?= $item->mediumThumb ?>" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"><?= $item->price ?></h5>
+                <h4 class="card-title"><?= $item->name ?></h4>
+            </div>
+        </div>
+    <?php }); ?>
+</div>
 
-<aside class="col-md-4 p-0">
-    <h4 class="title">Orders</h4>
+<aside class="col-md-4">
+    <h3 class="title">Orders</h3>
     <div class="control-list">
-        <table class="table data" data-control="rowlink">
+        <table class="table data">
             <thead>
                 <tr>
-                    <th class="list-checkbox">
-                        <div class="checkbox custom-checkbox nolabel">
-                            <input type="checkbox" id="checkboxAll" />
-                            <label for="checkboxAll"></label>
-                        </div>
-                    </th>
-                    <th class="sort-desc"><a href="/">Title</a></th>
-                    <th class="active sort-asc"><a href="/">Created</a></th>
-                    <th class="sort-desc"><a href="/">Author</a></th>
-                    <th><span>Categories</span></th>
-                    <th><span>Published</span></th>
-                    <th><span>Updated</span></th>
-                    <th class="list-setup"><a href="/" title="List options"></a></th>
+                    <th class="sort-desc"><a href="/">Name</a></th>
+                    <th class="active sort-asc"><a href="/">QTY</a></th>
+                    <th><span>Price</span></th>
+                    <th><span>Total</span></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td class="list-checkbox nolink">
-                        <div class="checkbox custom-checkbox nolabel">
-                            <input id="checkbox_1" type="checkbox" />
-                            <label for="checkbox_1">Check</label>
-                        </div>
-                    </td>
-                    <td><a href="/">Welcome to October</a></td>
-                    <td>Oct 01, 2013</td>
-                    <td>Adam Person</td>
-                    <td>News</td>
-                    <td>Oct 01, 2013</td>
-                    <td>Oct 01, 2013</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr class="active">
-                    <td class="list-checkbox nolink">
-                        <div class="checkbox custom-checkbox nolabel">
-                            <input id="checkbox_2" type="checkbox" checked="checked" /><label for="checkbox_2">Check The marketplace is open!</label>
-                        </div>
-                    </td>
-                    <td><a href="/">The marketplace is open!</a></td>
-                    <td>Oct 15, 2013</td>
-                    <td>Sam Georges</td>
-                    <td>Features</td>
-                    <td>Oct 16, 2013</td>
-                    <td>Oct 16, 2013</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="list-checkbox nolink">
-                        <div class="checkbox custom-checkbox nolabel">
-                            <input id="checkbox_3" type="checkbox" />
-                            <label for="checkbox_3">Check Welcome to the Builder!</label>
-                        </div>
-                    </td>
-                    <td><a href="/">Welcome to the Builder!</a></td>
-                    <td>Oct 21, 2013</td>
-                    <td>Alexey Bobkov</td>
-                    <td>News, Features</td>
-                    <td>Oct 21, 2013</td>
-                    <td>Oct 21, 2013</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="list-checkbox nolink">
-                        <div class="checkbox custom-checkbox nolabel">
-                            <input id="checkbox_4" type="checkbox" />
-                            <label for="checkbox_4">Check Components explained</label>
-                        </div>
-                    </td>
-                    <td><a href="/">Components explained</a></td>
-                    <td>Nov 12, 2013</td>
-                    <td>Alexey Bobkov</td>
-                    <td>Tutorials</td>
-                    <td>Nov 12, 2013</td>
-                    <td>Nov 12, 2013</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="list-checkbox nolink">
-                        <div class="checkbox custom-checkbox nolabel">
-                            <input id="checkbox_5" type="checkbox" />
-                            <label for="checkbox_5">Check Creating a module in 90 seconds</label>
-                        </div>
-                    </td>
-                    <td><a href="/">Creating a module in 90 seconds</a></td>
-                    <td>Nov 15, 2013</td>
-                    <td>Sam Georges</td>
-                    <td>Tutorials</td>
-                    <td>Nov 15, 2013</td>
-                    <td>Nov 15, 2013</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </body>
         </table>
-        <div class="list-footer">
-            <div class="list-pagination">
-                <div class="control-pagination">
-                    <span class="page-iteration">1-5 of 20</span>
-                    <a href="#" class="page-back" title="Previous page"></a><a href="#" class="page-next" title="Next page"></a>
-                </div>
+        <table class="table data scrolify" style="height:200px;overflow:auto;display:block;">
+            <tbody style="width:100%;display:table;">
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Item dkfk</td>
+                    <td>3</td>
+                    <td>200</td>
+                    <td>600</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="control-toolbar mt-4" style="position:absolute;bottom:0;width:95%;">
+        <div class="toolbar-item toolbar-primary">
+            <div data-control="toolbar">
+                <button type="button" class="btn btn-primary btn-circle btn-sm">
+                    <i class="fa fa-dollar-sign"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-circle btn-sm">
+                    <i class="fas fa-percent"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-circle btn-sm">
+                    <i class="fas fa-print"></i>
+                </button>
             </div>
         </div>
     </div>
